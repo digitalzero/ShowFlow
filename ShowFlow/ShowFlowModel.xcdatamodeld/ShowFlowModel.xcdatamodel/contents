@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="SetList" representedClassName="SetList" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="songs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Song" inverseName="whichList" inverseEntity="Song" syncable="YES"/>
+    </entity>
+    <entity name="Song" representedClassName="Song" syncable="YES">
+        <attribute name="bpm" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="timecode" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="whichList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SetList" inverseName="songs" inverseEntity="SetList" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SetList" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Song" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

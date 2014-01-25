@@ -1,13 +1,18 @@
 //
-//  ShowFlowViewController.h
+//  SetList.m
 //  ShowFlow
 //
 //  Created by Demetrius Henry on 1/21/14.
 //  Copyright (c) 2014 Digital Zero, LLC. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SetList.h"
+#import "Song.h"
 
-@interface ShowFlowViewController : UIViewController
+
+@implementation SetList
+
+@dynamic name;
+@dynamic songs;
 
 @end

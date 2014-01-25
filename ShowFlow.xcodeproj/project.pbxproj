@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4548DC7C1891FF7A005E08F8 /* ShowFlowAppDelegate+UIManagedDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 4548DC7B1891FF7A005E08F8 /* ShowFlowAppDelegate+UIManagedDocument.m */; };
+		4548DC7F18922394005E08F8 /* SetListsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4548DC7E18922394005E08F8 /* SetListsTableViewCell.m */; };
+		455D012C1891F19B00E1DCEA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455D012B1891F19B00E1DCEA /* CoreData.framework */; };
 		457D193B188F2D2D0012A307 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457D193A188F2D2D0012A307 /* Foundation.framework */; };
 		457D193D188F2D2D0012A307 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457D193C188F2D2D0012A307 /* CoreGraphics.framework */; };
 		457D193F188F2D2D0012A307 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457D193E188F2D2D0012A307 /* UIKit.framework */; };
@@ -15,13 +18,22 @@
 		457D194B188F2D2D0012A307 /* ShowFlowAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D194A188F2D2D0012A307 /* ShowFlowAppDelegate.m */; };
 		457D194E188F2D2D0012A307 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457D194C188F2D2D0012A307 /* Main_iPhone.storyboard */; };
 		457D1951188F2D2E0012A307 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457D194F188F2D2E0012A307 /* Main_iPad.storyboard */; };
-		457D1954188F2D2E0012A307 /* ShowFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D1953188F2D2E0012A307 /* ShowFlowViewController.m */; };
 		457D1956188F2D2E0012A307 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457D1955188F2D2E0012A307 /* Images.xcassets */; };
 		457D195D188F2D2E0012A307 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457D195C188F2D2E0012A307 /* XCTest.framework */; };
 		457D195E188F2D2E0012A307 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457D193A188F2D2D0012A307 /* Foundation.framework */; };
 		457D195F188F2D2E0012A307 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457D193E188F2D2D0012A307 /* UIKit.framework */; };
 		457D1967188F2D2E0012A307 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 457D1965188F2D2E0012A307 /* InfoPlist.strings */; };
 		457D1969188F2D2E0012A307 /* ShowFlowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D1968188F2D2E0012A307 /* ShowFlowTests.m */; };
+		457D1974188F2DEE0012A307 /* ShowFlowModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 457D1972188F2DEE0012A307 /* ShowFlowModel.xcdatamodeld */; };
+		457D197D188F333B0012A307 /* SetList.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D197C188F333B0012A307 /* SetList.m */; };
+		457D1980188F333C0012A307 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D197F188F333C0012A307 /* Song.m */; };
+		457D1983188F33FC0012A307 /* SetList+Addon.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D1982188F33FC0012A307 /* SetList+Addon.m */; };
+		457D1986188F340E0012A307 /* Song+Addon.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D1985188F340E0012A307 /* Song+Addon.m */; };
+		457D198A188F47C90012A307 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D1989188F47C90012A307 /* CoreDataTableViewController.m */; };
+		457D198D188F48BA0012A307 /* SetListsCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 457D198C188F48BA0012A307 /* SetListsCDTVC.m */; };
+		45BF5A68188FA5AF0041660A /* SongsCDTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BF5A67188FA5AF0041660A /* SongsCDTVC.m */; };
+		45BF5A6B188FA5CB0041660A /* AddSetListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BF5A6A188FA5CB0041660A /* AddSetListViewController.m */; };
+		45BF5A6E188FA5DF0041660A /* AddSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BF5A6D188FA5DF0041660A /* AddSongViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4543FBFB1892F95200308B37 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		4548DC7A1891FF7A005E08F8 /* ShowFlowAppDelegate+UIManagedDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShowFlowAppDelegate+UIManagedDocument.h"; sourceTree = "<group>"; };
+		4548DC7B1891FF7A005E08F8 /* ShowFlowAppDelegate+UIManagedDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShowFlowAppDelegate+UIManagedDocument.m"; sourceTree = "<group>"; };
+		4548DC7D18922394005E08F8 /* SetListsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetListsTableViewCell.h; sourceTree = "<group>"; };
+		4548DC7E18922394005E08F8 /* SetListsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetListsTableViewCell.m; sourceTree = "<group>"; };
+		455D012B1891F19B00E1DCEA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		457D1937188F2D2D0012A307 /* ShowFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		457D193A188F2D2D0012A307 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		457D193C188F2D2D0012A307 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -47,14 +65,31 @@
 		457D194A188F2D2D0012A307 /* ShowFlowAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowFlowAppDelegate.m; sourceTree = "<group>"; };
 		457D194D188F2D2D0012A307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		457D1950188F2D2E0012A307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		457D1952188F2D2E0012A307 /* ShowFlowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowFlowViewController.h; sourceTree = "<group>"; };
-		457D1953188F2D2E0012A307 /* ShowFlowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowFlowViewController.m; sourceTree = "<group>"; };
 		457D1955188F2D2E0012A307 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		457D195B188F2D2E0012A307 /* ShowFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShowFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		457D195C188F2D2E0012A307 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		457D1964188F2D2E0012A307 /* ShowFlowTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShowFlowTests-Info.plist"; sourceTree = "<group>"; };
 		457D1966188F2D2E0012A307 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		457D1968188F2D2E0012A307 /* ShowFlowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowFlowTests.m; sourceTree = "<group>"; };
+		457D1973188F2DEE0012A307 /* ShowFlowModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShowFlowModel.xcdatamodel; sourceTree = "<group>"; };
+		457D197B188F333B0012A307 /* SetList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetList.h; sourceTree = "<group>"; };
+		457D197C188F333B0012A307 /* SetList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetList.m; sourceTree = "<group>"; };
+		457D197E188F333C0012A307 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		457D197F188F333C0012A307 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		457D1981188F33FC0012A307 /* SetList+Addon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SetList+Addon.h"; sourceTree = "<group>"; };
+		457D1982188F33FC0012A307 /* SetList+Addon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SetList+Addon.m"; sourceTree = "<group>"; };
+		457D1984188F340E0012A307 /* Song+Addon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Song+Addon.h"; sourceTree = "<group>"; };
+		457D1985188F340E0012A307 /* Song+Addon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Song+Addon.m"; sourceTree = "<group>"; };
+		457D1988188F47C90012A307 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableViewController.h; path = CoreDataTableViewController/CoreDataTableViewController.h; sourceTree = "<group>"; };
+		457D1989188F47C90012A307 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableViewController.m; path = CoreDataTableViewController/CoreDataTableViewController.m; sourceTree = "<group>"; };
+		457D198B188F48BA0012A307 /* SetListsCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetListsCDTVC.h; sourceTree = "<group>"; };
+		457D198C188F48BA0012A307 /* SetListsCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetListsCDTVC.m; sourceTree = "<group>"; };
+		45BF5A66188FA5AF0041660A /* SongsCDTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongsCDTVC.h; sourceTree = "<group>"; };
+		45BF5A67188FA5AF0041660A /* SongsCDTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongsCDTVC.m; sourceTree = "<group>"; };
+		45BF5A69188FA5CB0041660A /* AddSetListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSetListViewController.h; sourceTree = "<group>"; };
+		45BF5A6A188FA5CB0041660A /* AddSetListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSetListViewController.m; sourceTree = "<group>"; };
+		45BF5A6C188FA5DF0041660A /* AddSongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSongViewController.h; sourceTree = "<group>"; };
+		45BF5A6D188FA5DF0041660A /* AddSongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSongViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455D012C1891F19B00E1DCEA /* CoreData.framework in Frameworks */,
 				457D193D188F2D2D0012A307 /* CoreGraphics.framework in Frameworks */,
 				457D193F188F2D2D0012A307 /* UIKit.framework in Frameworks */,
 				457D193B188F2D2D0012A307 /* Foundation.framework in Frameworks */,
@@ -81,6 +117,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		455D00DF1891E63600E1DCEA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				457D194C188F2D2D0012A307 /* Main_iPhone.storyboard */,
+				457D194F188F2D2E0012A307 /* Main_iPad.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		455D00E01891E64800E1DCEA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				457D198B188F48BA0012A307 /* SetListsCDTVC.h */,
+				457D198C188F48BA0012A307 /* SetListsCDTVC.m */,
+				4548DC7D18922394005E08F8 /* SetListsTableViewCell.h */,
+				4548DC7E18922394005E08F8 /* SetListsTableViewCell.m */,
+				45BF5A66188FA5AF0041660A /* SongsCDTVC.h */,
+				45BF5A67188FA5AF0041660A /* SongsCDTVC.m */,
+				45BF5A69188FA5CB0041660A /* AddSetListViewController.h */,
+				45BF5A6A188FA5CB0041660A /* AddSetListViewController.m */,
+				45BF5A6C188FA5DF0041660A /* AddSongViewController.h */,
+				45BF5A6D188FA5DF0041660A /* AddSongViewController.m */,
+				457D1988188F47C90012A307 /* CoreDataTableViewController.h */,
+				457D1989188F47C90012A307 /* CoreDataTableViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		455D00E11891E65B00E1DCEA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				457D1972188F2DEE0012A307 /* ShowFlowModel.xcdatamodeld */,
+				457D1984188F340E0012A307 /* Song+Addon.h */,
+				457D1985188F340E0012A307 /* Song+Addon.m */,
+				457D197E188F333C0012A307 /* Song.h */,
+				457D197F188F333C0012A307 /* Song.m */,
+				457D1981188F33FC0012A307 /* SetList+Addon.h */,
+				457D1982188F33FC0012A307 /* SetList+Addon.m */,
+				457D197B188F333B0012A307 /* SetList.h */,
+				457D197C188F333B0012A307 /* SetList.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		457D192E188F2D2D0012A307 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +183,8 @@
 		457D1939188F2D2D0012A307 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4543FBFB1892F95200308B37 /* iAd.framework */,
+				455D012B1891F19B00E1DCEA /* CoreData.framework */,
 				457D193A188F2D2D0012A307 /* Foundation.framework */,
 				457D193C188F2D2D0012A307 /* CoreGraphics.framework */,
 				457D193E188F2D2D0012A307 /* UIKit.framework */,
@@ -116,10 +198,11 @@
 			children = (
 				457D1949188F2D2D0012A307 /* ShowFlowAppDelegate.h */,
 				457D194A188F2D2D0012A307 /* ShowFlowAppDelegate.m */,
-				457D194C188F2D2D0012A307 /* Main_iPhone.storyboard */,
-				457D194F188F2D2E0012A307 /* Main_iPad.storyboard */,
-				457D1952188F2D2E0012A307 /* ShowFlowViewController.h */,
-				457D1953188F2D2E0012A307 /* ShowFlowViewController.m */,
+				4548DC7A1891FF7A005E08F8 /* ShowFlowAppDelegate+UIManagedDocument.h */,
+				4548DC7B1891FF7A005E08F8 /* ShowFlowAppDelegate+UIManagedDocument.m */,
+				455D00DF1891E63600E1DCEA /* Views */,
+				455D00E01891E64800E1DCEA /* View Controllers */,
+				455D00E11891E65B00E1DCEA /* Models */,
 				457D1955188F2D2E0012A307 /* Images.xcassets */,
 				457D1941188F2D2D0012A307 /* Supporting Files */,
 			);
@@ -254,9 +337,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				457D1980188F333C0012A307 /* Song.m in Sources */,
+				45BF5A6B188FA5CB0041660A /* AddSetListViewController.m in Sources */,
+				45BF5A68188FA5AF0041660A /* SongsCDTVC.m in Sources */,
+				457D1974188F2DEE0012A307 /* ShowFlowModel.xcdatamodeld in Sources */,
+				457D198A188F47C90012A307 /* CoreDataTableViewController.m in Sources */,
+				457D197D188F333B0012A307 /* SetList.m in Sources */,
 				457D1947188F2D2D0012A307 /* main.m in Sources */,
-				457D1954188F2D2E0012A307 /* ShowFlowViewController.m in Sources */,
 				457D194B188F2D2D0012A307 /* ShowFlowAppDelegate.m in Sources */,
+				457D1983188F33FC0012A307 /* SetList+Addon.m in Sources */,
+				457D1986188F340E0012A307 /* Song+Addon.m in Sources */,
+				4548DC7F18922394005E08F8 /* SetListsTableViewCell.m in Sources */,
+				4548DC7C1891FF7A005E08F8 /* ShowFlowAppDelegate+UIManagedDocument.m in Sources */,
+				457D198D188F48BA0012A307 /* SetListsCDTVC.m in Sources */,
+				45BF5A6E188FA5DF0041660A /* AddSongViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +491,7 @@
 				GCC_PREFIX_HEADER = "ShowFlow/ShowFlow-Prefix.pch";
 				INFOPLIST_FILE = "ShowFlow/ShowFlow-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -410,6 +505,7 @@
 				GCC_PREFIX_HEADER = "ShowFlow/ShowFlow-Prefix.pch";
 				INFOPLIST_FILE = "ShowFlow/ShowFlow-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -475,6 +571,7 @@
 				457D196E188F2D2E0012A307 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		457D196F188F2D2E0012A307 /* Build configuration list for PBXNativeTarget "ShowFlowTests" */ = {
 			isa = XCConfigurationList;
@@ -483,8 +580,22 @@
 				457D1971188F2D2E0012A307 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		457D1972188F2DEE0012A307 /* ShowFlowModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				457D1973188F2DEE0012A307 /* ShowFlowModel.xcdatamodel */,
+			);
+			currentVersion = 457D1973188F2DEE0012A307 /* ShowFlowModel.xcdatamodel */;
+			path = ShowFlowModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 457D192F188F2D2D0012A307 /* Project object */;
 }

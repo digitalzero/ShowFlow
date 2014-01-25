@@ -7,12 +7,22 @@
 //
 
 #import "ShowFlowAppDelegate.h"
+#import "ShowFlowAppDelegate+UIManagedDocument.h"
+
+@interface ShowFlowAppDelegate ()
+
+@end
 
 @implementation ShowFlowAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.managedDocument = [self createDocument];
+    
+    NSDictionary *userInfo = self.managedDocument ? @{ @"ManagedDocument" : self.managedDocument } : nil;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ManagedDocumentNotification" object:self userInfo:userInfo];
+    
     return YES;
 }
 							
@@ -42,5 +52,7 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
 
 @end
