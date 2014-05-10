@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SetList+Addon.h"
+#import "Song+Addon.h"
 
-@interface AddSongViewController : UIViewController
+@interface AddSongViewController : UITableViewController <UITextFieldDelegate>
+
+@property (nonatomic, strong) SetList *chosenSetlist;
 
 @end

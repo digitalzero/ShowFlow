@@ -7,10 +7,14 @@
 //
 
 #import "CoreDataTableViewController.h"
+#import "AddSongViewController.h"
+#import "SetList+Addon.h"
+#import "Song+Addon.h"
+#import <iAd/iAd.h>
 
-@interface SongsCDTVC : CoreDataTableViewController
+@interface SongsCDTVC : CoreDataTableViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, strong) SetList *chosenSetlist;
 @property (nonatomic, strong) UIManagedDocument *managedDocument;
-
 
 @end

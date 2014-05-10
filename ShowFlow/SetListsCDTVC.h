@@ -8,9 +8,12 @@
 
 #import "CoreDataTableViewController.h"
 #import "SetList+Addon.h"
+#import <iAd/iAd.h>
+
 
 @interface SetListsCDTVC : CoreDataTableViewController <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) UIManagedDocument *managedDocument;
+
 
 @end

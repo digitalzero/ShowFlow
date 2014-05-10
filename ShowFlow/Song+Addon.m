@@ -25,6 +25,8 @@
     
     song.whichList = setlist;
     
+    NSLog(@"Song created with name %@", song.name);
+    
     return song;
 }
 

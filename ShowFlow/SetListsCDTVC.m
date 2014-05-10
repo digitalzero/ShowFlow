@@ -12,6 +12,8 @@
 
 @interface SetListsCDTVC ()
 
+@property (nonatomic, strong) UIAlertView *setlistAlert;
+
 @end
 
 @implementation SetListsCDTVC
@@ -32,7 +34,7 @@
 {
     [super viewDidLoad];
     [self setupFetchedResultsController];
-    //self.canDisplayBannerAds = YES;
+    self.canDisplayBannerAds = YES;
 }
 
 - (IBAction)editButtonPressed:(UIBarButtonItem *)sender
@@ -48,11 +50,15 @@
 
 - (IBAction)addButtonPressed:(UIBarButtonItem *)sender
 {
-    UIAlertView *setlistAlert = [[UIAlertView alloc] initWithTitle:@"Create Setlist" message:@"Enter a name for this setlist." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
+    _setlistAlert = [[UIAlertView alloc] initWithTitle:@"Create Setlist" message:@"Enter a name for this setlist." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
     
-    setlistAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
-    [setlistAlert textFieldAtIndex:0].placeholder = @"Name";
-    [setlistAlert show];
+    _setlistAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [_setlistAlert textFieldAtIndex:0].placeholder = @"Name";
+    [_setlistAlert textFieldAtIndex:0].autocapitalizationType = UITextAutocapitalizationTypeWords;
+    [_setlistAlert textFieldAtIndex:0].returnKeyType = UIReturnKeyDone;
+    [_setlistAlert show];
+    
+    [_setlistAlert textFieldAtIndex:0].delegate = self;
 }
 
 
@@ -64,6 +70,7 @@
     SetList *setlist = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     cell.firstTextField.text = setlist.name;
+    cell.firstTextField.autocapitalizationType = UITextAutocapitalizationTypeWords;
     if ([self.tableView isEditing]) {
         cell.firstTextField.userInteractionEnabled = YES;
     } else
@@ -83,14 +90,21 @@
     [self.managedDocument saveToURL:self.managedDocument.fileURL forSaveOperation:UIDocumentSaveForOverwriting completionHandler:nil];
 }
 
+/*
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
 {
 }
+ */
 
 #pragma mark - TextField Methods
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    if (textField == [_setlistAlert textFieldAtIndex:0]) {
+        [self alertView:_setlistAlert clickedButtonAtIndex:1];
+        [_setlistAlert dismissWithClickedButtonIndex:1 animated:YES];
+    }
+    
     [textField resignFirstResponder];
     return YES;
 }
@@ -115,7 +129,7 @@
 }
 
 
-#pragma mark - Document Methods
+#pragma mark - Data Methods
 
 - (void)createSetlist:(NSString *)name
 {
@@ -151,13 +165,24 @@
     if ([sender isKindOfClass:[UITableViewCell class]]) {
         indexPath = [self.tableView indexPathForCell:sender];
     }
-    // [self prepareViewController:segue.destinationViewController forSegue:segue.identifier fromIndexPath:indexPath];
+    [self prepareViewController:segue.destinationViewController forSegue:segue.identifier fromIndexPath:indexPath];
+}
+
+- (void)prepareViewController:(id)vc forSegue:(NSString *)segueIdentifer fromIndexPath:(NSIndexPath *)indexPath
+{
+    SetList *setlist = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    // note that we don't check the segue identifier here
+    if ([vc isKindOfClass:[SongsCDTVC class]]) {
+        SongsCDTVC *songsCDTVC = (SongsCDTVC *)vc;
+        songsCDTVC.chosenSetlist = setlist;
+        songsCDTVC.managedDocument = self.managedDocument;
+    }
 }
 
 #pragma mark - Alert View Methods
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
+{    
     switch (buttonIndex) {
         case 1:
             [self createSetlist:[alertView textFieldAtIndex:0].text];
